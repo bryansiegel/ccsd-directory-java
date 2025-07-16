@@ -12,14 +12,16 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String FirstName;
-    private String LastName;
-    private String FullName;
-    private String Title;
+    private String Name;
+    private String Division;
     private String Department;
+    private String Position;
     private String Phone;
+    private String DialExtension;
     private String Fax;
     private String LocationCode;
+    private String Address;
+
     @CreationTimestamp
     @Column(updatable = false)
     private LocalDateTime createdAt;
@@ -32,36 +34,20 @@ public class Contact {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return FirstName;
+    public String getName() {
+        return Name;
     }
 
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public String getLastName() {
-        return LastName;
+    public String getDivision() {
+        return Division;
     }
 
-    public void setLastName(String lastName) {
-        LastName = lastName;
-    }
-
-    public String getFullName() {
-        return FullName;
-    }
-
-    public void setFullName(String fullName) {
-        FullName = fullName;
-    }
-
-    public String getTitle() {
-        return Title;
-    }
-
-    public void setTitle(String title) {
-        Title = title;
+    public void setDivision(String division) {
+        Division = division;
     }
 
     public String getDepartment() {
@@ -72,12 +58,28 @@ public class Contact {
         Department = department;
     }
 
+    public String getPosition() {
+        return Position;
+    }
+
+    public void setPosition(String position) {
+        Position = position;
+    }
+
     public String getPhone() {
         return Phone;
     }
 
     public void setPhone(String phone) {
         Phone = phone;
+    }
+
+    public String getDialExtension() {
+        return DialExtension;
+    }
+
+    public void setDialExtension(String dialExtension) {
+        DialExtension = dialExtension;
     }
 
     public String getFax() {
@@ -96,6 +98,14 @@ public class Contact {
         LocationCode = locationCode;
     }
 
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -108,14 +118,15 @@ public class Contact {
     public String toString() {
         return "Contact{" +
                 "id=" + id +
-                ", FirstName='" + FirstName + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", FullName='" + FullName + '\'' +
-                ", Title='" + Title + '\'' +
+                ", Name='" + Name + '\'' +
+                ", Division='" + Division + '\'' +
                 ", Department='" + Department + '\'' +
+                ", Position='" + Position + '\'' +
                 ", Phone='" + Phone + '\'' +
+                ", DialExtension='" + DialExtension + '\'' +
                 ", Fax='" + Fax + '\'' +
                 ", LocationCode='" + LocationCode + '\'' +
+                ", Address='" + Address + '\'' +
                 ", createdAt=" + createdAt +
                 '}';
     }
