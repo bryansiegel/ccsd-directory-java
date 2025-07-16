@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:insert="~{admin/fragments/head.html}"></head>
+
+<body id="page-top">
+<!-- Page Wrapper -->
+<div id="wrapper">
+    <!-- Sidebar -->
+    <ul th:insert="~{admin/fragments/sidebar.html}" class="navbar-nav sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+        style="background-color: #417cc0"></ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav th:insert="~{admin/fragments/nav.html}"
+                 class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"></nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div th:switch="${formdownloads}">
+                        <h2 th:case="null">No Current Evaluations yet!</h2>
+                        <div th:case="*">
+                            <h2>Form Downloads</h2>
+                            <p class="pt-2 pb-3"><a href="/admin/form-downloads/create" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add a new Form Download</a></p>
+
+                            <table  id="adminTable" class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Form Type</th>
+                                    <th>Form Number</th>
+                                    <th>Form Name</th>
+                                    <th>File Path</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="formDownloadsModel : ${formdownloads}">
+                                    <td th:text="${formDownloadsModel.formType}"></td>
+                                    <td th:text="${formDownloadsModel.formNumber}"></td>
+                                    <td th:text="${formDownloadsModel.formName}"></td>
+                                    <td>
+                                        <span th:if="${formDownloadsModel.filePath != null}">
+                                        <a th:href="${currentUrl + formDownloadsModel.filePath}" target="_blank">
+                                            <span th:text="${formDownloadsModel.filePath}"></span>
+                                        </a>
+                                        </span>
+                                        <span th:if="${formDownloadsModel.formMessage != null}">
+                                            <span th:text="${formDownloadsModel.formMessage}"></span>
+                                        </span>
+                                    </td>
+
+                                    <td><a th:href="@{/admin/form-downloads/edit/{id}(id=${formDownloadsModel.id})}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                                    <a th:href="@{/admin/form-downloads/delete/{id}(id=${formDownloadsModel.id})}" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Delete</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer th:insert="~{admin/fragments/footer.html}" class="sticky-footer bg-white"></footer>
+    </div>
+</div>
+
+<div th:insert="~{admin/fragments/scripts.html}"></div>
+
+</body>
+</html>

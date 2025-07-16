@@ -1,0 +1,295 @@
+<div class="container">
+    <div class="row">
+        <h2 class="page-section-heading text-center text-uppercase  mb-5">Downloads</h2>
+
+        <!-- Accordian -->
+        <div class="accordion accordion-flush shadow" id="accordianDownloads">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFirst">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFirst" aria-expanded="false"
+                            aria-controls="flush-collapseFirst">
+                                <span style="font-weight:bold; color: #1671b7;">
+                                    Graphic Arts Center Work Requests</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseFirst" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingFirst" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                            <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                                <li th:if="${downloads.category == 'graphics_arts_work_requests'}">
+                                    <a th:href="${downloads.filePath}" target="_blank">
+                                        <i class="fa-solid fa-file"
+                                           style="color:#1671b7;padding-right: 10px;"></i>
+                                        <span th:text="${downloads.formName}"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseEight" aria-expanded="false"
+                            aria-controls="flush-collapseEight">
+                                <span style="font-weight:bold; color: #1671b7;">
+                                    Directories</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingEight" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'directories'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-file"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false"
+                            aria-controls="flush-collapseOne">
+                        <span style="font-weight:bold; color: #1671b7;">CCSD Logos</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingOne" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                        <p>
+                            The logos to the bottom right may be imported into any particular document you are
+                            working on. Before you can import a logo, you must first download it to your
+                            computer. Right click on the logo of your choice and select "Save Target As..." It
+                            is not necessary to open the logo file in order to use it in your document. Please
+                            review the CCSD Logo Standards to learn how to properly use the district logo.</p>
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_logos'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-image"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                            aria-controls="flush-collapseTwo">
+                                <span style="font-weight:bold; color: #1671b7;">
+                                    CCSD Logos with Leadership List (Leadership Lockup)</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingTwo" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                        <h5>English PNG Files</h5>
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_logos_with_leadership_English_png_files'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-image"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <h5>English JPG Files:</h5>
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_logos_with_leadership_english_jpg_files'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-image"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <h5>Spanish PNG Files:</h5>
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_logos_with_leadership_spanish_png_files'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-image"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <h5>Spanish JPG Files:</h5>
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_logos_with_leadership_spanish_jpg_files'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-image"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                                <span style="font-weight:bold; color: #1671b7;">CCSD Board of School Trustees Vision
+                                    Statement</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingThree" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_board_of_trustees'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-file"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                        <span style="font-weight:bold; color: #1671b7;">CCSD Letterhead</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingFour" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_letterhead'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-file"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <h5>For Departments Located at 5100 W. Sahara ONLY:</h5>
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_letterhead_dept_at_sahara'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-file"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                                <span style="font-weight:bold; color: #1671b7;">
+                                    CCSD Templates</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingFour" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_templates'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-file"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false"
+                            aria-controls="flush-collapseSix">
+                                <span style="font-weight:bold; color: #1671b7;">
+
+                                    School Logos</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingFour" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><i class="fa-solid fa-image"
+                                                           style="color:#1671b7;padding-right: 10px;"></i><a
+                                    href="/elementary-school-logos">
+                                Elementary School Logos</a></li>
+                            <li class="list-group-item"><i class="fa-solid fa-image"
+                                                           style="color:#1671b7;padding-right: 10px;"></i><a
+                                    href="/middle-school-logos">
+                                Middle School Logos</a></li>
+                            <li class="list-group-item"><i class="fa-solid fa-image"
+                                                           style="color:#1671b7;padding-right: 10px;"></i><a
+                                    href="/high-school-logos">
+                                High School Logos</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                            aria-controls="flush-collapseSeven">
+                                <span style="font-weight:bold; color: #1671b7;">CCSD Employee Dress Style
+                                    Guidelines</span>
+                    </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                     aria-labelledby="flush-headingFour" data-bs-parent="#accordianDownloads">
+                    <div class="accordion-body">
+                        <ul class="list-group" th:each="downloads : ${downloads}" style="list-style: none !important;">
+                            <li th:if="${downloads.category == 'ccsd_employee_dress_style'}">
+                                <a th:href="${downloads.filePath}" target="_blank">
+                                    <i class="fa-solid fa-file"
+                                       style="color:#1671b7;padding-right: 10px;"></i>
+                                    <span th:text="${downloads.formName}"></span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+
+        </div>
+        <!-- Accordian End -->
+
+    </div>
+</div>
