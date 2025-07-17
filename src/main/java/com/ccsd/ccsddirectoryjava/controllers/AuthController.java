@@ -17,6 +17,11 @@ public class AuthController {
     @Autowired
     private ContactRepo contactRepo;
 
+    @GetMapping("/")
+    public String index() {
+        return "admin/login";
+    }
+
 
         @GetMapping("/login")
         public String login() {
