@@ -31,3 +31,51 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Environment and Configuration Files
+env.properties
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Claude AI Files
+.claude/
+.claude-cache/
+claude-*.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+log/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Security and sensitive files
+*.key
+*.pem
+*.crt
+*.csr
+keystore.jks
+keystore.p12
+secrets.properties
+
+# Generated files
+fix_contacts_table.sql
+
+# Application specific
+application-local.properties
+application-dev.properties
+application-prod.properties
+!/src/main/resources/application.properties
+!/src/test/resources/application-test.properties
