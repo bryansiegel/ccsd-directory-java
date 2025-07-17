@@ -21,6 +21,7 @@ public class ContactController {
     public String index(Model model) {
         model.addAttribute("contacts", contactRepo.findAll());
         return "admin/contacts/index";
+
     }
 
     @GetMapping("/create")
@@ -31,6 +32,7 @@ public class ContactController {
 
     @PostMapping
     public String store(@ModelAttribute Contact contact, RedirectAttributes redirectAttributes) {
+        contact.setId(null);
         contactRepo.save(contact);
         redirectAttributes.addFlashAttribute("success", "Contact created successfully!");
         return "redirect:/admin/contacts";
