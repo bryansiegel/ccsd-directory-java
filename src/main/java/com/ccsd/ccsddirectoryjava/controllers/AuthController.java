@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 
 
-
-
 public class AuthController {
 
     @Autowired
@@ -23,22 +21,22 @@ public class AuthController {
     }
 
 
-        @GetMapping("/login")
-        public String login() {
-            return "admin/login";
-        }
+    @GetMapping("/login")
+    public String login() {
+        return "admin/login";
+    }
 
-        @GetMapping("/login-error/")
-        public String loginError() {
-            return "admin/login-error";
-        }
+    @GetMapping("/login-error/")
+    public String loginError() {
+        return "admin/login-error";
+    }
 
-        @GetMapping("admin/dashboard/")
-        public String dashboard(Model model) {
-            model.addAttribute("contacts", contactRepo.findAll(PageRequest.of(0, 5)).getContent());
+    @GetMapping("admin/dashboard/")
+    public String dashboard(Model model) {
+        model.addAttribute("contacts", contactRepo.findAll(PageRequest.of(0, 5)).getContent());
 
-            return "admin/dashboard";
-        }
+        return "admin/dashboard";
+    }
 
 
 }
