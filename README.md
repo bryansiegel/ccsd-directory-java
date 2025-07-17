@@ -32,7 +32,7 @@ A Spring Boot web application for managing contact information within the Clark 
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/bryansiegel/ccsd-directory-java
 cd ccsd-directory-java
 ```
 
@@ -52,12 +52,6 @@ Import the database backup file located at `_sql/ccsd_directory_java.sql`:
 ```bash
 # Import the database backup (replace with your database name)
 mysql -u your_username -p your_database_name < _sql/ccsd_directory_java.sql
-```
-
-Or run the SQL script to fix the contacts table if needed:
-```sql
--- Run this in your MySQL database
-ALTER TABLE contacts MODIFY COLUMN id BIGINT NOT NULL AUTO_INCREMENT;
 ```
 
 ### 4. Build and Run
