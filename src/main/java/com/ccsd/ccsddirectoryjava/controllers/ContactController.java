@@ -38,7 +38,7 @@ public class ContactController {
 
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable Long id, Model model) {
-        Optional<Contact> contact = contactRepo.findById(id.intValue());
+        Optional<Contact> contact = contactRepo.findById((long) id.intValue());
         if (contact.isPresent()) {
             model.addAttribute("contact", contact.get());
             return "admin/contacts/edit";
@@ -56,8 +56,8 @@ public class ContactController {
 
     @PostMapping("/{id}/delete")
     public String delete(@PathVariable Long id, RedirectAttributes redirectAttributes) {
-        if (contactRepo.existsById(id.intValue())) {
-            contactRepo.deleteById(id.intValue());
+        if (contactRepo.existsById((long) id.intValue())) {
+            contactRepo.deleteById((long) id.intValue());
             redirectAttributes.addFlashAttribute("success", "Contact deleted successfully!");
         }
         return "redirect:/admin/contacts";

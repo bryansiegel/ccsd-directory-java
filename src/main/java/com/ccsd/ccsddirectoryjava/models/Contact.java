@@ -6,21 +6,22 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "contacts")  // Add this line to specify the table name
 public class Contact {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String Name;
-    private String Division;
-    private String Department;
-    private String Position;
-    private String Phone;
-    private String DialExtension;
-    private String Fax;
-    private String LocationCode;
-    private String Address;
+    private String name;        // Changed from Name
+    private String division;    // Changed from Division
+    private String department;  // Changed from Department
+    private String position;    // Changed from Position
+    private String phone;       // Changed from Phone
+    private String dialExtension; // Changed from DialExtension
+    private String fax;         // Changed from Fax
+    private String locationCode; // Changed from LocationCode
+    private String address;     // Changed from Address
 
     @CreationTimestamp
     @Column(updatable = false)
@@ -34,76 +35,77 @@ public class Contact {
         this.id = id;
     }
 
+    // Update getter/setter names to match the new field names
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getDivision() {
-        return Division;
+        return division;
     }
 
     public void setDivision(String division) {
-        Division = division;
+        this.division = division;
     }
 
     public String getDepartment() {
-        return Department;
+        return department;
     }
 
     public void setDepartment(String department) {
-        Department = department;
+        this.department = department;
     }
 
     public String getPosition() {
-        return Position;
+        return position;
     }
 
     public void setPosition(String position) {
-        Position = position;
+        this.position = position;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getDialExtension() {
-        return DialExtension;
+        return dialExtension;
     }
 
     public void setDialExtension(String dialExtension) {
-        DialExtension = dialExtension;
+        this.dialExtension = dialExtension;
     }
 
     public String getFax() {
-        return Fax;
+        return fax;
     }
 
     public void setFax(String fax) {
-        Fax = fax;
+        this.fax = fax;
     }
 
     public String getLocationCode() {
-        return LocationCode;
+        return locationCode;
     }
 
     public void setLocationCode(String locationCode) {
-        LocationCode = locationCode;
+        this.locationCode = locationCode;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -118,16 +120,18 @@ public class Contact {
     public String toString() {
         return "Contact{" +
                 "id=" + id +
-                ", Name='" + Name + '\'' +
-                ", Division='" + Division + '\'' +
-                ", Department='" + Department + '\'' +
-                ", Position='" + Position + '\'' +
-                ", Phone='" + Phone + '\'' +
-                ", DialExtension='" + DialExtension + '\'' +
-                ", Fax='" + Fax + '\'' +
-                ", LocationCode='" + LocationCode + '\'' +
-                ", Address='" + Address + '\'' +
+                ", Name='" + name + '\'' +
+                ", Division='" + division + '\'' +
+                ", Department='" + department + '\'' +
+                ", Position='" + position + '\'' +
+                ", Phone='" + phone + '\'' +
+                ", DialExtension='" + dialExtension + '\'' +
+                ", Fax='" + fax + '\'' +
+                ", LocationCode='" + locationCode + '\'' +
+                ", Address='" + address + '\'' +
                 ", createdAt=" + createdAt +
                 '}';
     }
+
+    // Other methods remain the same
 }
