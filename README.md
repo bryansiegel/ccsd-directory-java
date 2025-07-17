@@ -264,4 +264,4 @@ For questions or issues, please contact the development team or create an issue 
 
 **Version**: 0.0.1-SNAPSHOT  
 **Last Updated**: July 2025  
-**Maintainer**: CCSD Development Team
+**Maintainer**: CCSD
