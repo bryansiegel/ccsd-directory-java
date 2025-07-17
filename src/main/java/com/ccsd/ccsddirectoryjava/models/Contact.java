@@ -14,15 +14,15 @@ public class Contact {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    private String name;        // Changed from Name
-    private String division;    // Changed from Division
-    private String department;  // Changed from Department
-    private String position;    // Changed from Position
-    private String phone;       // Changed from Phone
-    private String dialExtension; // Changed from DialExtension
-    private String fax;         // Changed from Fax
-    private String locationCode; // Changed from LocationCode
-    private String address;     // Changed from Address
+    private String name;
+    private String division;
+    private String department;
+    private String position;
+    private String phone;
+    private String dialExtension;
+    private String fax;
+    private String locationCode;
+    private String address;
 
     @CreationTimestamp
     @Column(updatable = false)
@@ -36,7 +36,6 @@ public class Contact {
         this.id = id;
     }
 
-    // Update getter/setter names to match the new field names
     public String getName() {
         return name;
     }
@@ -134,5 +133,4 @@ public class Contact {
                 '}';
     }
 
-    // Other methods remain the same
 }
