@@ -9,22 +9,21 @@
             </div>
             <div class="card-body">
 
-<!--                <table class="table table-striped">-->
+                <table class="table table-striped">
 <!--                    <thead>-->
 <!--                    <tr>-->
-<!--                        <td>Form Name</td>-->
+<!--                        <td>Contacts</td>-->
 <!--                    </tr>-->
 <!--                    </thead>-->
-<!--                    <tbody>-->
-<!--                        <tr th:each="indexofforms : ${indexofforms}">-->
-<!--                            <td>-->
-<!--                                <a th:href="${currentUrl + indexofforms.filePath}" target="_blank">-->
-<!--                                        <span  th:text="${indexofforms.formName}"></span>-->
-<!--                                </a>-->
-<!--                            </td>-->
-<!--                        </tr>-->
-<!--                    </tbody>-->
-<!--                </table>-->
+                    <tbody>
+                        <tr th:each="contacts : ${contacts}">
+                            <td>
+                                <a th:href="@{/admin/contacts/{id}(id=${contacts.id})}">
+                                    <span  th:text="${contacts.name}"></span></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
